@@ -1,0 +1,116 @@
+ [
+  {
+  "freightOrderID": "6100013025",
+  "shipper": "Decathlon",
+  "consignee": "SAP Table Tennis Club",
+  "driver": "Mr. Ethan Zhang",
+  "pickupDatetime": "20141225130000",
+  "deliveryDatetime": "20141228130000",
+  "address":"DW_MADRID",
+  "deliveryAddress": "NO 1001, Chenhui Road, Pudong, Shanghai",
+  "items": [
+            {
+            "itemName": "Glasses",
+            "itemType": "Pieces",
+            "quantity": "20",
+            "unitOfMeasure": "PC",
+            "major": "0",
+            "minor": "1",
+            "selected": false,
+            "image": "glasses2.png"
+            },
+            {
+            "itemName": "Computer Keyboard",
+            "itemType": "BOX",
+            "quantity": "200",
+            "unitOfMeasure": "BOX",
+            "major": "0",
+            "minor": "2",
+            "selected": false,
+            "image": "keyboard.png"
+            },
+            {
+            "itemName": "Small Printer",
+            "itemType": "Package",
+            "quantity": "30",
+            "unitOfMeasure": "PKG",
+            "major": "0",
+            "minor": "3",
+            "selected": false,
+            "image": "printer.png"
+            }
+            ]
+  },
+  {
+  "freightOrderID": "6100013026",
+  "shipper": "Decathlon",
+  "consignee": "SAP Table Tennis Club",
+  "driver": "Mr. Ethan Zzhang",
+  "pickupDatetime": "20141223120000",
+  "deliveryDatetime": "20141225120000",
+  "address":"DW_MILAN",
+  "deliveryAddress": "NO 1001, Chenhui Road, Pudong, Shanghai",
+  "items": [
+            {
+            "itemName": "PSP",
+            "itemType": "Package",
+            "quantity": "40",
+            "unitOfMeasure": "Piece",
+            "major": "0",
+            "minor": "1",
+            "selected": false,
+            "image": "PSP.png"
+            },
+            {
+            "itemName": "Router",
+            "itemType": "Product",
+            "quantity": "10",
+            "unitOfMeasure": "Piece",
+            "major": "0",
+            "minor": "2",
+            "selected": false,
+            "image": "router.png"
+            },
+            {
+            "itemName": "USB Flash Disk",
+            "itemType": "Package",
+            "quantity": "20",
+            "unitOfMeasure": "Piece",
+            "major": "1",
+            "minor": "3",
+            "selected": false,
+            "image": "USBFlashDisk.png"
+            },
+            {
+            "itemName": "Glasses",
+            "itemType": "Package",
+            "quantity": "20",
+            "unitOfMeasure": "L",
+            "major": "0",
+            "minor": "4",
+            "selected": false,
+            "image": "glasses2.png"
+            },
+            {
+            "itemName": "Telescope",
+            "itemType": "Package",
+            "quantity": "30",
+            "unitOfMeasure": "Piece",
+            "major": "0",
+            "minor": "5",
+            "selected": false,
+            "image": "telescope.png"
+            },
+            {
+            "itemName": "Small Printer",
+            "itemType": "Package",
+            "quantity": "50",
+            "unitOfMeasure": "Piece",
+            "major": "0",
+            "minor": "6",
+            "selected": false,
+            "image": "printer.png"
+            }
+            ]
+  }
+  ]
