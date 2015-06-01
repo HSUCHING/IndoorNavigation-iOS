@@ -126,7 +126,7 @@ int pointsPosition[28][2] ={
 //    { 64, 752, 144, 54 }, { 208, 752, 144, 54 },{ 416, 752, 144, 54 }, { 560, 752, 144, 54 },
 //    { 64, 806, 144, 54 },{ 208, 806, 144, 54 }, { 416, 806, 144, 54 }, { 560, 806, 144, 54 }
 //};
-int storagePosition[24][4] ={{90, 90, 125, 90}, {215, 90, 125, 90}, {429, 90, 125, 90}, {554, 90, 125, 90}, {90, 180, 125, 90}, {215, 180, 125, 90}, {429, 180, 125, 90}, {554, 180, 125, 90}, {90, 360, 125, 90}, {215, 360, 125, 90}, {429, 360, 125, 90}, {554, 360, 125, 90}, {90, 450, 125, 90}, {215, 450, 125, 90}, {429, 450, 125, 90}, {554, 450, 125, 90}, {90, 630, 125, 90}, {215, 630, 125, 90}, {429, 630, 125, 90}, {554, 630, 125, 90}, {90, 720, 125, 90}, {215, 720, 125, 90}, {429, 720, 125, 90}, {554, 720, 125, 90}};
+int storagePosition[24][4] ={{90, 90, 125, 50}, {215, 90, 125, 50}, {429, 90, 125, 50}, {554, 90, 125, 50}, {90, 180, 125, 50}, {215, 180, 125, 50}, {429, 180, 125, 50}, {554, 180, 125, 50}, {90, 360, 125, 50}, {215, 360, 125, 50}, {429, 360, 125, 50}, {554, 360, 125, 50}, {90, 450, 125, 50}, {215, 450, 125, 50}, {429, 450, 125, 50}, {554, 450, 125, 50}, {90, 630, 125, 50}, {215, 630, 125, 50}, {429, 630, 125, 50}, {554, 630, 125, 50}, {90, 720, 125, 50}, {215, 720, 125, 50}, {429, 720, 125, 50}, {554, 720, 125, 50}};
 
 
 //int keyPointMap[40] = {
@@ -274,7 +274,7 @@ int iBeaconPositions[6][2] = {
         [oStorage setTitle:[NSString stringWithFormat:@"1 - %d", i] forState:UIControlStateNormal];
 //        oStorage.tintColor = [UIColor blackColor];
         oStorage.titleLabel.font = [UIFont boldSystemFontOfSize:12];
-        [oStorage setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [oStorage setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
         [self.view addSubview:oStorage];
         [oStorage addTarget:self action:@selector(getKeyPointIndexByClick:) forControlEvents:UIControlEventTouchUpInside];

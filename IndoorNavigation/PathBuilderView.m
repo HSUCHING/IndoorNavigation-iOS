@@ -66,7 +66,7 @@ static CGFloat const kPointDiameter = 7.0;
         
         gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = self.frame;
-        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor,(__bridge id)[UIColor blueColor].CGColor,(__bridge id)[UIColor greenColor].CGColor ];
+        gradientLayer.colors = @[(__bridge id)[UIColor colorWithRed:0.0039 green:0.6745 blue:0.7451 alpha:1.0].CGColor,(__bridge id)[UIColor blueColor].CGColor,(__bridge id)[UIColor redColor].CGColor ];
         gradientLayer.startPoint = CGPointMake(0,0);
         gradientLayer.endPoint = CGPointMake(1,1);
         gradientLayer.mask = self.prospectivePathShapeView.shapeLayer;

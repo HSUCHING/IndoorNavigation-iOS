@@ -50,14 +50,13 @@ YALContextMenuTableViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [NSThread sleepForTimeInterval:1.5];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"Indoor Explorer";
-//    UIImage *bgImage=[UIImage imageNamed:@"Wallpaper.png"];
-//    self.view.backgroundColor=[UIColor colorWithPatternImage:bgImage];
-    UIImage *scanviewImage=[UIImage imageNamed:@"scanview.png"];
+    UIImage *scanviewbg=[UIImage imageNamed:@"scanviewbg"];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:scanviewbg]];
+    
     [self initiateMenuOptions];
     [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
-    self.viewPreview.backgroundColor=[UIColor colorWithPatternImage:scanviewImage];
     self.isReading = NO;
     self.captureSession = nil;
     [self loadBeepSound];
