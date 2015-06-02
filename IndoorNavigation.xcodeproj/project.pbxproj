@@ -52,6 +52,8 @@
 		AAAF3E1B1AB5B3CD00012A24 /* PathBuilderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3E131AB5B3CD00012A24 /* PathBuilderView.m */; };
 		AAAF3E1C1AB5B3CD00012A24 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3E151AB5B3CD00012A24 /* ShapeView.m */; };
 		AAAF3E1D1AB5B3CD00012A24 /* storage.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3E171AB5B3CD00012A24 /* storage.m */; };
+		FBB717411B1D550E00891788 /* AAShareBubbles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBB7173E1B1D550E00891788 /* AAShareBubbles.bundle */; };
+		FBB717421B1D550E00891788 /* AAShareBubbles.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB717401B1D550E00891788 /* AAShareBubbles.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,9 @@
 		AAAF3E151AB5B3CD00012A24 /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
 		AAAF3E161AB5B3CD00012A24 /* storage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = storage.h; sourceTree = "<group>"; };
 		AAAF3E171AB5B3CD00012A24 /* storage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = storage.m; sourceTree = "<group>"; };
+		FBB7173E1B1D550E00891788 /* AAShareBubbles.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AAShareBubbles.bundle; path = BubblesButton/AAShareBubbles.bundle; sourceTree = "<group>"; };
+		FBB7173F1B1D550E00891788 /* AAShareBubbles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAShareBubbles.h; path = BubblesButton/AAShareBubbles.h; sourceTree = "<group>"; };
+		FBB717401B1D550E00891788 /* AAShareBubbles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAShareBubbles.m; path = BubblesButton/AAShareBubbles.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +273,7 @@
 		AAAF3DE31AB5B37100012A24 /* IndoorNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				FBB7173D1B1D54F400891788 /* BubbleButton */,
 				079B29DD1B1AB168004711EC /* ScanView */,
 				740BF2361AB98FB80064E472 /* AMWaveTransition */,
 				740BF22F1AB98FB10064E472 /* Checkbox */,
@@ -334,6 +340,16 @@
 				AAAF3E021AB5B37100012A24 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBB7173D1B1D54F400891788 /* BubbleButton */ = {
+			isa = PBXGroup;
+			children = (
+				FBB7173E1B1D550E00891788 /* AAShareBubbles.bundle */,
+				FBB7173F1B1D550E00891788 /* AAShareBubbles.h */,
+				FBB717401B1D550E00891788 /* AAShareBubbles.m */,
+			);
+			name = BubbleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +443,7 @@
 				AAAF3DF81AB5B37100012A24 /* LaunchScreen.xib in Resources */,
 				740BF2231AB98D2B0064E472 /* FreightOrders.json in Resources */,
 				AA66CDF01AC165E500BA9D7B /* PSP.png in Resources */,
+				FBB717411B1D550E00891788 /* AAShareBubbles.bundle in Resources */,
 				079B29EB1B1ABB82004711EC /* ContextMenuCell.xib in Resources */,
 				740BF21B1AB98D0A0064E472 /* beep.mp3 in Resources */,
 				AA48D4241AC28D490093113A /* pick_bg@2x.png in Resources */,
@@ -473,6 +490,7 @@
 				740BF2281AB98EB10064E472 /* ScanViewController.m in Sources */,
 				740BF2341AB98FB10064E472 /* BFPaperCheckbox.m in Sources */,
 				AAAF3DF01AB5B37100012A24 /* PathBuilderViewController.m in Sources */,
+				FBB717421B1D550E00891788 /* AAShareBubbles.m in Sources */,
 				AA66CDE41ABEB1EF00BA9D7B /* ShelfCargoViewController.m in Sources */,
 				740BF23C1AB98FB80064E472 /* AMWaveViewController.m in Sources */,
 				740BF22B1AB98EDF0064E472 /* TableViewController.m in Sources */,
@@ -598,7 +616,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IndoorNavigation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -614,7 +632,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IndoorNavigation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

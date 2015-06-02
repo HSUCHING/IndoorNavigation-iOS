@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wNr-5B-vJX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -299,24 +299,24 @@
                                 <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9g-Wv-HlN">
-                                        <rect key="frame" x="566" y="500" width="152" height="49"/>
+                                        <rect key="frame" x="543" y="600" width="75" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="152" id="Lnh-Ly-krv"/>
-                                            <constraint firstAttribute="height" constant="49" id="SaY-Ok-Vqs"/>
+                                            <constraint firstAttribute="width" constant="75" id="Lnh-Ly-krv"/>
+                                            <constraint firstAttribute="height" constant="75" id="SaY-Ok-Vqs"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" backgroundImage="scanbutton">
+                                        <state key="normal" backgroundImage="scanqr">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="startStopReading:" destination="KBS-M8-qCN" eventType="touchDown" id="O6J-WT-STX"/>
+                                            <action selector="shareTapped:" destination="KBS-M8-qCN" eventType="touchDown" id="zhy-cF-MyH"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="H9g-Wv-HlN" secondAttribute="trailing" constant="50" id="2RJ-wy-PqX"/>
-                                    <constraint firstItem="H9g-Wv-HlN" firstAttribute="top" secondItem="dr1-l8-PWe" secondAttribute="top" constant="500" id="Mtg-KD-VnQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9g-Wv-HlN" secondAttribute="trailing" constant="150" id="2RJ-wy-PqX"/>
+                                    <constraint firstItem="H9g-Wv-HlN" firstAttribute="top" secondItem="dr1-l8-PWe" secondAttribute="top" constant="600" id="Mtg-KD-VnQ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -341,12 +341,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
+                        <outlet property="shareButton" destination="H9g-Wv-HlN" id="TwP-v9-vSa"/>
                         <outlet property="viewPreview" destination="dr1-l8-PWe" id="6FK-fy-4ZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKI-QK-PEe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3172" y="1198"/>
+            <point key="canvasLocation" x="-3112" y="1184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OZn-cg-K3W">
@@ -364,7 +365,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNo-cu-CF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3760" y="1192"/>
+            <point key="canvasLocation" x="-3751" y="1046"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3ti-BQ-lZ7">
@@ -488,7 +489,7 @@
         <image name="AddToFavouritesIcn" width="32" height="32"/>
         <image name="button" width="77" height="80"/>
         <image name="define_location-50x50" width="25" height="25"/>
-        <image name="scanbutton" width="152" height="49"/>
+        <image name="scanqr" width="512" height="512"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

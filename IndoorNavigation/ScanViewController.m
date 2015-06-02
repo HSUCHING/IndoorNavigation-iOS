@@ -11,6 +11,7 @@
 #import "YALContextMenuTableView.h"
 #import "YALNavigationBar.h"
 #import "ContextMenuCell.h"
+#define CUSTOM_BUTTON_ID 100
 
 static NSString *const menuCellIdentifier = @"rotationCell";
 
@@ -27,6 +28,8 @@ YALContextMenuTableViewDelegate
 }
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bbitemStart;
 @property (weak, nonatomic) IBOutlet UIView *viewPreview;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+
 
 @property (nonatomic) BOOL isReading;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
@@ -46,10 +49,16 @@ YALContextMenuTableViewDelegate
 
 @end
 
-@implementation ScanViewController
+@implementation ScanViewController{
+    AAShareBubbles *shareBubbles;
+    float radius;
+    float bubbleRadius;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    radius = 130;
+    bubbleRadius = 40;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"Indoor Explorer";
     UIImage *scanviewbg=[UIImage imageNamed:@"scanviewbg"];
@@ -356,6 +365,82 @@ YALContextMenuTableViewDelegate
     return UIInterfaceOrientationMaskPortrait;//只支持这一个方向(正常的方向)
     
 }
+
+- (IBAction)shareTapped:(id)sender
+{
+    if(shareBubbles) {
+        shareBubbles = nil;
+    }
+    shareBubbles = [[AAShareBubbles alloc] initWithPoint:_shareButton.center radius:radius inView:self.view];
+    shareBubbles.delegate = self;
+    shareBubbles.bubbleRadius = bubbleRadius;
+//    shareBubbles.showFacebookBubble = YES;
+//    shareBubbles.showTwitterBubble = YES;
+//    shareBubbles.showGooglePlusBubble = YES;
+//    shareBubbles.showTumblrBubble = YES;
+//    shareBubbles.showVkBubble = YES;
+//    shareBubbles.showLinkedInBubble = YES;
+//    shareBubbles.showYoutubeBubble = YES;
+//    shareBubbles.showVimeoBubble = YES;
+//    shareBubbles.showRedditBubble = YES;
+//    shareBubbles.showPinterestBubble = YES;
+    shareBubbles.showInstagramBubble = YES;
+    shareBubbles.showWhatsappBubble = YES;
+    shareBubbles.showMailBubble = YES;
+    shareBubbles.showQRBubble = YES;
+//    shareBubbles.showMsgBubble = YES;
+    shareBubbles.showShareBubble= YES;
+    shareBubbles.showWhatsappBubble =YES;
+    
+    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"custom-vine-icon"]
+                          backgroundColor:[UIColor colorWithRed:0.0 green:164.0/255.0 blue:120.0/255.0 alpha:1.0]
+                              andButtonId:CUSTOM_BUTTON_ID];
+    
+    [shareBubbles show];
+}
+
+
+#pragma mark AAShareBubbles
+
+-(void)aaShareBubbles:(AAShareBubbles *)shareBubbles tappedBubbleWithType:(int)bubbleType
+{
+    switch (bubbleType) {
+        case AAShareBubbleTypeFacebook:
+            NSLog(@"Facebook");
+            break;
+        case AAShareBubbleTypeTwitter:
+            NSLog(@"Twitter");
+            break;
+        case AAShareBubbleTypeGooglePlus:
+            NSLog(@"Google+");
+            break;
+        case AAShareBubbleTypeTumblr:
+            NSLog(@"Tumblr");
+            break;
+        case AAShareBubbleTypeVk:
+            NSLog(@"Vkontakte (vk.com)");
+            break;
+        case AAShareBubbleTypeLinkedIn:
+            NSLog(@"LinkedIn");
+            break;
+        case AAShareBubbleTypeYoutube:
+            NSLog(@"Youtube");
+            break;
+        case AAShareBubbleTypeVimeo:
+            NSLog(@"Vimeo");
+            break;
+        case AAShareBubbleTypeReddit:
+            NSLog(@"Reddit");
+            break;
+        case CUSTOM_BUTTON_ID:
+            NSLog(@"Custom Button With Type %d", bubbleType);
+            break;
+        default:
+            break;
+    }
+}
+
+
 
 
 #pragma mark - IBAction
