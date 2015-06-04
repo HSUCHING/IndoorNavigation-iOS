@@ -70,10 +70,10 @@ YALContextMenuTableViewDelegate
     self.captureSession = nil;
     [self loadBeepSound];
 }
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return YES;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
